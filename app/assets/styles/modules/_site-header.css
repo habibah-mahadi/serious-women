@@ -6,7 +6,12 @@
     padding: 10px 0;
 
     @mixin atMedium {
+        position: fixed;
         background-color: $mainBlue30;
+
+        &--dark {
+            background-color: $mainBlue85;
+        }
     }
 
     &__btn-container {
@@ -21,12 +26,18 @@
         background-color: $mainBlue;
         padding: 13px 29px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(.8);
+        transform-origin: 50% 0;
+        transition: transform .3s ease-out;
+        padding: 25px 36px;
 
         @mixin atMedium {
             left: auto;
             transform: translateX(0);
-            padding: 25px 36px;
+            /* descendant selector - this selector will target the logo only when the dark header is being used*/
+            .site-header--dark & {
+                transform: scale(.54);
+            }
         }
     }
 
