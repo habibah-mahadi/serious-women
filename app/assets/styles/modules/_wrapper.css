@@ -40,4 +40,8 @@
         }
     }
 
+    &--narrow {
+        max-width: 470px;
+    }
+
 }
