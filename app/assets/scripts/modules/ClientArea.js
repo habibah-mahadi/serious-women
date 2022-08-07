@@ -20,7 +20,7 @@ class ClientArea {
         /* we are not going to test this functionality locally on our computer due to a web browser security protocol CORS.
         Netlify dev makes previewing all of your code locally
         */
-        Axios.post('/.netlify/functions/secret-area', {password: this.field.value}).then(response => {
+        Axios.post('https://magical-empanada-a4a06b.netlify.app/.netlify/functions/secret-area', {password: this.field.value}).then(response => {
             //if success
             this.form.remove(); //remove the form
             this.contentArea.innerHTML = response.data;
