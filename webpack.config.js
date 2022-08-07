@@ -48,7 +48,17 @@ let config = {
 
   module: {
     rules: [
-      cssConfig
+      cssConfig,
+      {
+        test: /\.js$/,
+        exclude: /{node_modules}/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react','@babel/preset-env'] //added react
+          }
+        }
+      }
     ]
   }
 
@@ -86,16 +96,16 @@ if (currentTask == 'dev') {
 //so the old built file should be deleted. use this NPM package: CleanWebpackPlugin
 if (currentTask == 'build') {
 
-  config.module.rules.push({
-    test: /\.js$/,
-    exclude: /{node_modules}/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env']
-      }
-    }
-  }); //for people who viewing using older web browser, webpack can adjust our JS so that its backward compatible. we still can use modern JS features (e.g. arrow functions, classes) but the generated file will use similar but older features
+  // config.module.rules.push({
+  //   test: /\.js$/,
+  //   exclude: /{node_modules}/,
+  //   use: {
+  //     loader: 'babel-loader',
+  //     options: {
+  //       presets: ['@babel/preset-env']
+  //     }
+  //   }
+  // }); //for people who viewing using older web browser, webpack can adjust our JS so that its backward compatible. we still can use modern JS features (e.g. arrow functions, classes) but the generated file will use similar but older features
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
   config.output = {
