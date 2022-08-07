@@ -9,15 +9,8 @@ import ClientArea from './modules/ClientArea';
 //React related code goes here
 import React from 'react';
 import ReactDOM from 'react-dom';
-function MyAmazingComponent() {
-    return (
-        <div>
-            <h1 className='section-title section-title--blue'>This Is My Amazing React Component (JSX)</h1>
-            <p>React is great, the sky is blue, grass is green.</p>
-        </div>
-        
-    );
-}
+//import React component that we created
+import MyAmazingComponent from './modules/MyAmazingComponent';
 ReactDOM.render(<MyAmazingComponent/>, document.querySelector("#my-react-example")); //component
 
 // new Modal();
