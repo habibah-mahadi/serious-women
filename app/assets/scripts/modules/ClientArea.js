@@ -1,16 +1,16 @@
-import Axios from "axios"; //it makes sending off an asynchronous request super easy.
+import Axios from 'axios'; //it makes sending off an asynchronous request super easy.
 
 class ClientArea {
     constructor() {
         this.injectHTML();
         this.form = document.querySelector(".client-area__form");
-        this.form = document.querySelector(".client-area__input");
-        this.contentArea = this.form = document.querySelector(".client-area__content-area");
+        this.field = document.querySelector(".client-area__input");
+        this.contentArea = document.querySelector(".client-area__content-area");
         this.events();
     }
 
     events() {
-        this.form.addEventListener("submit", e=> {
+        this.form.addEventListener("submit", e => {
             e.preventDefault();
             this.sendRequest();
         });
@@ -37,8 +37,8 @@ class ClientArea {
             <div class="wrapper wrapper--medium">
                 <h2 class="section-title section-title--blue">Secret Client Area</h2>
                 <form class="client-area__form" action="">
-                <input class="client-area__input" type="text" placeholder="Enter the secret phrase">
-                <button class="btn btn--orange">Submit</button>
+                    <input class="client-area__input" type="text" placeholder="Enter the secret phrase">
+                    <button class="btn btn--orange">Submit</button>
                 </form>
                 <div class="client-area__content-area"></div>
             </div>
