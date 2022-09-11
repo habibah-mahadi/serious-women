@@ -60,7 +60,7 @@
             
             @mixin atLarge {
                 max-width: 500px;
-                top: 400px;
+                top: 630px;
             }
 
         }
