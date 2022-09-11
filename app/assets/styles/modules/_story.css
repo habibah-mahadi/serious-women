@@ -40,7 +40,7 @@
         
         @mixin atLarge {
             width: 160px;
-            top: 1200px;
+            top: 1000px;
             right: 100px;
         }
     }

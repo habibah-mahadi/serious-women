@@ -108,7 +108,7 @@
         }
 
         @mixin atLarge {
-            top: 1700px;
+            top: 1400px;
             
         }
     }
