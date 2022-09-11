@@ -18,6 +18,7 @@
 
     &__subtitle {
         font-weight: 700;
+        margin-bottom: 48px;
     }
 
     &__thumbnail {

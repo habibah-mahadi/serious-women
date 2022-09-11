@@ -7,8 +7,8 @@
     position: fixed;
     user-select: none;
 
-    &--dark {
-        background-color: rgba(0,0,0,.5);
+    &--dark, &--is-expanded {
+        background-color: rgba(0,0,0,.6);
         backdrop-filter: blur(10px);
     }
 
@@ -134,9 +134,5 @@
     }
 
     transition: background-color .3s ease-out;
-
-    &--is-expanded {
-        background-color: rgba(0,0,0,.6);
-    }
     
 }
