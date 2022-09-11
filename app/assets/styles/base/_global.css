@@ -1,9 +1,28 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('assets/fonts/CenturyGothic.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('assets/fonts/CenturyGothicBold.TTF');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Abuget';
+    src: url('assets/fonts/Abuget.TTF');
+    font-weight: 400;
+    font-style: normal;
+} 
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     color: #333;
 }
 

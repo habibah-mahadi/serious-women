@@ -1,0 +1,148 @@
+.thanks {
+    background-color: $pinkmenyala;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+
+    @mixin atMedium {
+        text-align: initial;
+    }
+
+    .wrapper {
+        overflow: visible;
+    }
+
+    &__title {
+        color: $kuningmenyala;
+        margin: 0;
+        margin-bottom: 10px;
+        line-height: 0.8;
+        font-size: 2.3rem;
+        margin-top: 32px;
+
+        @mixin atMedium {
+            font-size: 4rem;
+            margin-top: 0;
+        }
+
+        @mixin atLarge {
+            font-size: 5.75rem;
+            margin-top: 0;
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        color: #fff;
+        margin: 0;
+        line-height: 1.5;
+
+        a {
+            text-decoration: none;
+        }
+        
+        &--highlight {
+            color: $black;
+            background-color: $kuningmenyala;
+            padding: 5px;
+            margin: 5px 0;
+            display: inline-block;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+
+            &:hover {
+                background-color: $black;
+                color: #fff;
+            }
+        }
+
+        &--fancy {
+            font-family: 'Abuget';
+            font-weight: 400;
+            font-size: 3rem;
+        }
+    }
+
+    &__dog {
+        position: relative;
+        
+        &-img {
+            filter: drop-shadow(10px 10px 10px #000);
+        }
+
+        &-glass {
+            position: absolute;
+            text-align: left;
+            -webkit-mask-size: 100%;
+            mask-size: 100%;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            
+            &--left {
+                left: 24%;
+                top: 22%;
+                width: 17%;
+                -webkit-mask-image: url('assets/images/leftglass 1.png');
+                mask-image: url('assets/images/leftglass 1.png');
+            }
+
+            &--right {
+                left: 49%;
+                top: 24%;
+                width: 15%;
+                -webkit-mask-image: url('assets/images/rightglass 1.png');
+                mask-image: url('assets/images/rightglass 1.png');
+            }
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        width: 100px;
+        right: 20px;
+        top: 2000px;
+        z-index: -1;
+        
+        @mixin atMedium {
+            top: 1250px;
+        }
+
+        @mixin atLarge {
+            top: 1700px;
+            
+        }
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+    
+    100% {
+        transform: translate3d(-225%, 0, 0);
+    }
+}
+
+.hello {
+    position: absolute;
+    top: 0;
+    right: -125%;
+    color: #fff;
+    line-height: 0;
+    font-size: 6rem;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    &--right {
+        animation-delay: 1500ms;
+
+        @mixin atMedium {
+            animation-delay: 1200ms;
+        }
+    }
+}
+  

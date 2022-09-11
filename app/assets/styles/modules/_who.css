@@ -1,0 +1,68 @@
+.who {
+    background-color: $babyblue;
+    position: relative;
+    z-index: 0;
+
+    .wrapper {
+        overflow: visible;
+    }
+
+    &__text {
+        line-height: 1.3;
+        font-weight: 700;
+    }
+
+    &__imgs {
+        position: relative;
+        text-align: center;
+        z-index: -1;
+        @mixin atMedium {
+            position: initial;
+        }
+    }
+
+    &__img {
+        @mixin atMedium {
+            position: absolute;
+        }
+    
+        &--1 {
+            max-width: 100px;
+            position: absolute;
+            right: 20%;
+            top: -53px;
+
+            @mixin atMedium {
+                top: 500px;
+                right: 20px;
+                z-index: 1;
+            }
+
+            @mixin atLarge {
+                top: 550px;
+                right: 20px;
+                z-index: 1;
+            }
+        }
+
+        &--2 {
+            border-radius: 20px;
+            max-width: 200px;
+            width: 100%;
+            margin-left: auto; margin-right: auto;
+            
+            @mixin atMedium {
+                border-radius: 20px 0 0 20px;
+                max-width: 400px;
+                top: 750px;
+                right: 0;
+            }
+            
+            @mixin atLarge {
+                max-width: 500px;
+                top: 800px;
+            }
+
+        }
+    }
+}

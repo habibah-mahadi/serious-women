@@ -1,8 +1,12 @@
 .primary-nav {
-    padding-top: 10px;
-
+    padding-top: 20px;
+    
     @mixin atMedium {
         padding-top: 0;
+        flex-grow: 1;
+        text-align: left;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     ul {
@@ -11,38 +15,58 @@
     }
 
     li {
+        margin-bottom: 10px;
+        text-align: center;
         list-style: none;
-        display: inline-block;
-        padding-right: 7px;
-
-        &:last-child {
-            padding-right: 0;
-
-            @mixin atMedium{
-                padding-right: 20px;
-            }
-        }
 
         @mixin atMedium {
+            display: inline-block;
             padding-right: 20px;
+            margin-bottom: 0;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        
         }
 
         a {
             color: #fff;
             text-decoration: none;
-            font-weight: 300;
-            padding: 5px 8px;
-            font-size: .8rem;
-            display: block;
-            background-color: $mainBlue55;
+            font-weight: 700;
+            padding: 5px 10px;
+            font-size: 1.5rem;
+            display: inline-block;
+            text-transform: uppercase;
+            background-color: $pinkmenyala;
 
+            &:hover {
+                box-shadow: 2px 2px 0 $babyblue;
+            }
+            
             @mixin atMedium {
-                padding: 12px 0;
+                color: #fff;
                 font-size: 1rem;
                 background-color: transparent;
+                position: relative;
 
-                &.is-current-link {
-                    color: #fabb69;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 0%;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: all .2s;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+    
+                &:hover {
+                    box-shadow: none;
+                    &::after {
+                        width: calc(100% - 20px);
+                    }
                 }
             }
         }

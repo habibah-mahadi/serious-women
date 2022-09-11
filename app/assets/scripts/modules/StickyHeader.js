@@ -25,19 +25,6 @@ class StickyHeader {
         } else {
             this.siteHeader.classList.remove("site-header--dark");
         }
-
-        this.pageSections.forEach(el => this.calcSection(el));
-    }
-
-    calcSection(el) {
-        if (window.scrollY + this.browserHeight > el.offsetTop && window.scrollY < el.offsetTop + el.offsetHeight) {
-            let scrollPercent = el.getBoundingClientRect().y / this.browserHeight * 100;
-            if (scrollPercent < 18 && scrollPercent > -0.1 && this.scrollDirection == 'down'|| scrollPercent < 33 && this.scrollDirection == 'up') {
-                let matchingLink = el.getAttribute("data-matching-link");
-                document.querySelectorAll(`.primary-nav a:not(${matchingLink})`).forEach(el => el.classList.remove("is-current-link"))
-                document.querySelector(matchingLink).classList.add("is-current-link");
-            }
-        }
     }
 
     determineScrollDirection() {

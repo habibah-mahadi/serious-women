@@ -1,0 +1,47 @@
+.story {
+    background-color: $black;
+    text-align: center;
+    background-image: url("assets/images/submitpattern 1.png");
+    background-size: cover;
+    position: relative;
+    
+    &__wrapper {
+        border: 3px solid $kuningmenyala;
+        padding: 32px;
+        background-color: $black;
+    }
+    &__title {
+        color: $pinkmenyala;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 2.3rem;
+
+        @mixin atMedium {
+            font-size: 3rem;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 60px;
+    }
+
+    &__lip {
+        position: absolute;
+        width: 100px;
+        top: 1550px;
+        right: 15px;
+        
+        @mixin atMedium {
+            top: 960px;
+        }
+        
+        @mixin atLarge {
+            width: 160px;
+            top: 1200px;
+            right: 100px;
+        }
+    }
+}

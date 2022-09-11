@@ -1,7 +1,6 @@
 .generic-content-container {
     p {
         font-weight: 300;
-        line-height: 1.65;
         margin: 0 0 1.8rem 0;
 
         @mixin atSmall {
@@ -11,5 +10,27 @@
         a {
             font-weight: 700;
         }
+    }
+}
+
+.text {
+    font-size: 1.2rem;
+
+    @mixin atMedium {
+        font-size: 1.5rem;
+    }
+}
+
+.text--fancy {
+    font-family: 'Abuget', sans-serif;
+    font-size: 4rem;
+    line-height: .7;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    @mixin atMedium {
+        font-size: 5rem;
+        line-height: 0.8;
     }
 }

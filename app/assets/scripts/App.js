@@ -1,24 +1,17 @@
 import '../styles/styles.css';
 import 'lazysizes';
 import MobileMenu from './modules/MobileMenu';
-import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
-// import Modal from './modules/Modal';
-import ClientArea from './modules/ClientArea';
-
-//React related code goes here
-import React from 'react';
-import ReactDOM from 'react-dom';
-//import React component that we created
-import MyAmazingComponent from './modules/MyAmazingComponent';
-ReactDOM.render(<MyAmazingComponent/>, document.querySelector("#my-react-example")); //component
+import 'animate.css';
+import Rellax from 'rellax';
 
 // new Modal();
-new ClientArea();
 new StickyHeader();
-new MobileMenu();
-new RevealOnScroll(document.querySelectorAll(".feature-item"), 75); //element should begin when it crosses the bottom 25% of the browser viewport
-new RevealOnScroll(document.querySelectorAll(".testimonial"), 60); //this will come a bit later, because it needs 40% of the element from the bottom to be visible 
+new MobileMenu(); 
+new Rellax('.rellax-md', {
+    breakpoints: [530, 768, 1010]
+});
+new Rellax('.rellax');
 
 //code splitting with webpack
 let modal; //initially as undefined
@@ -47,3 +40,4 @@ document.querySelectorAll(".open-modal").forEach(el => {
 if (module.hot) {
     module.hot.accept();
 }
+

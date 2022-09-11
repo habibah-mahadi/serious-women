@@ -12,6 +12,11 @@
 @import 'modules/_section-title';
 @import 'modules/_feature-item';
 @import 'modules/_testimonial';
+@import 'modules/_browse';
+@import 'modules/_who';
+@import 'modules/_story';
+@import 'modules/_cats';
+@import 'modules/_thanks';
 @import 'modules/_site-footer';
 @import 'modules/_site-header';
 @import 'modules/_primary-nav';

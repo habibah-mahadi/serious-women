@@ -30,9 +30,16 @@
         &__medium-4 {
             grid-column: span 4;
         }
+
+        &__medium-5 {
+            grid-column: span 5;
+        }
     
         &__medium-6 {
             grid-column: span 6;
+        }
+        &__medium-7 {
+            grid-column: span 7;
         }
 
         &__medium-8 {
@@ -49,6 +56,10 @@
         &__b-margin-until-large {
             margin-bottom: 0;
         }
+        &__large-3 {
+            grid-column: span 3;
+        }
+
         &__large-4 {
             grid-column: span 4;
         }
