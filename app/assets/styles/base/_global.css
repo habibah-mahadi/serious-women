@@ -21,10 +21,16 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    color: #fff;
+    background: orange;
+  }
+
 body {
     font-family: 'Century Gothic', sans-serif;
     color: #333;
 }
+
 
 img {
     max-width: 100%;
