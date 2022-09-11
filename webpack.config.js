@@ -20,6 +20,7 @@ class RunAfterCompile {
     compiler.hooks.done.tap('Copy images', function() {
       fse.copySync('./app/assets/images/', './docs/assets/images');
       fse.copySync('./app/assets/fonts/', './docs/assets/fonts');
+      fse.copySync('./app/favicon.ico', './docs/favicon.ico');
     })
   }
 }
