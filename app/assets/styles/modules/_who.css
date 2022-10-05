@@ -22,9 +22,6 @@
     }
 
     &__img {
-        @mixin atMedium {
-            position: absolute;
-        }
     
         &--1 {
             max-width: 100px;
@@ -33,13 +30,13 @@
             top: -53px;
 
             @mixin atMedium {
-                top: 500px;
+                top: 0;
                 right: 20px;
                 z-index: 1;
             }
 
             @mixin atLarge {
-                top: 400px;
+                top: 0;
                 right: 20px;
                 z-index: 1;
             }
@@ -52,15 +49,16 @@
             margin-left: auto; margin-right: auto;
             
             @mixin atMedium {
+                position: absolute;
                 border-radius: 20px 0 0 20px;
                 max-width: 400px;
-                top: 750px;
+                top: 400px;
                 right: 0;
             }
             
             @mixin atLarge {
                 max-width: 500px;
-                top: 630px;
+                top: 50px;
             }
 
         }
