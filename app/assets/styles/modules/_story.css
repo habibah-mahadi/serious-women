@@ -31,7 +31,7 @@
     &__lip {
         position: absolute;
         width: 100px;
-        top: 1550px;
+        top: 1500px;
         right: 15px;
         
         @mixin atMedium {
